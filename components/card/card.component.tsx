@@ -9,17 +9,13 @@ export type MetaDataItem = {
     id: number;
 }
 
-
-
-
 const StyledLink = styled(Link)`
-    
+    height: 17rem;
+
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px 2px;
     }
 `;
-
-
 
 const Meta = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
@@ -34,7 +30,8 @@ const Meta = styled.div`
     img {
         margin-right: 4px;
     }
-`
+`;
+
 const CardContainer = styled.div`
     color: var(--header-text-color);
     display: flex;
@@ -42,7 +39,7 @@ const CardContainer = styled.div`
     justify-content: space-between;
 
     width: 100%;
-    height: 17rem;
+    height: 100%;
 
     padding: 2rem;
     border: 1px solid var(--header-text-color);
@@ -57,11 +54,9 @@ const CardContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    
     margin-bottom: 2rem;
     font-size: var(--fz-xl);
-    
-`
+`;
 
 type BlogCardProps = {
     data: MetaDataItem;
@@ -69,7 +64,6 @@ type BlogCardProps = {
 
 const BlogCard = ({data}: BlogCardProps) => {
     const { title, date, topic} = data;
-
 
     return(
         <StyledLink href='./'>

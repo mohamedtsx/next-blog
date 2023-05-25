@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         --fz-md:1.6rem;
         --fz-lg: 1.8rem;
         --fz-xl: 2rem;
-        --fz-xxl: 2.2rem;
+        --fz-xxl: 2.4rem;
         --fz-heading: 3.2rem;
 
         --border-radius: 5px;
@@ -47,9 +47,9 @@ const GlobalStyle = createGlobalStyle`
 
     main {
         max-width: 114rem;
+        min-height: calc(100vh - 13.5rem);
         margin: 0 auto;
         padding: 3rem 1.5rem;
-        /* background-color: #eee; */
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
