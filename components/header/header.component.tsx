@@ -45,7 +45,7 @@ const Header = () => {
             <StyledNav>
                 <NaveLeft href='/'>Mohamed Khalid</NaveLeft>
                 <NaveRight>
-                    <StyledLink href='/'>About</StyledLink>
+                    <StyledLink href='/about'>About</StyledLink>
                     <StyledLink href='/'>Blog</StyledLink>
                 </NaveRight>
             </StyledNav>

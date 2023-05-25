@@ -59,8 +59,8 @@ const Footer = () => {
                 <SocialLIst>
                    <LiIcon url='https://linkedin.com/in/mohamedtsx' src='/static/icon-social/linkedin-icon.png'/>
                    <LiIcon url='https://github.com/mohamedtsx' src='/static/icon-social/github-icon.png'/>
-                   <LiIcon url='https://google.com' src='/static/icon-social/youtube-social.png'/>
-                   <LiIcon url='https://google.com' src='/static/icon-social/twitter-social.png'/>
+                   <LiIcon url='#' src='/static/icon-social/youtube-social.png'/>
+                   <LiIcon url='#' src='/static/icon-social/twitter-social.png'/>
                 </SocialLIst>
             </StyledContainer>
         </StyledFooter>

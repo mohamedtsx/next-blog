@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
         --fz-lg: 1.8rem;
         --fz-xl: 2rem;
         --fz-xxl: 2.4rem;
-        --fz-heading: 3.2rem;
+        --fz-heading: 4rem;
 
         --border-radius: 5px;
         --transition: .15s ease-in-out;
@@ -50,10 +50,6 @@ const GlobalStyle = createGlobalStyle`
         min-height: calc(100vh - 13.5rem);
         margin: 0 auto;
         padding: 3rem 1.5rem;
-
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
-        gap: 1rem;
     }
 
     a {
@@ -64,6 +60,10 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    h1,h2 {
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
 
     @media only screen and (min-width: 140em) {
         /* main {

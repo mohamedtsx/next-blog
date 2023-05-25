@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import BlogCard from '@/components/card/card.component';
-import Layout from '@/components/layout/layout.component';
+import styled from 'styled-components';
 
 
 const sampleData = {
@@ -10,16 +9,20 @@ const sampleData = {
   id: 1
 }
 
+const StyledMain = styled.main`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+  gap: 1rem;
+`
+
 export default function Home() {
 
   const A = Array(10).fill(sampleData);
   console.log(A)
 
   return (
-    <Layout>
-      <main>      
-        <BlogCard data={sampleData}/>
-      </main>
-    </Layout>
+    <StyledMain>      
+      <BlogCard data={sampleData}/>
+    </StyledMain>
   )
 }
