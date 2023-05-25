@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "@/styles/theme";
 
 import Header from "../header/header.component";
+import Footer from "../footer/footer.component";
 
 
 const Layout = ({children}: PropsWithChildren) => {
@@ -14,6 +15,7 @@ const Layout = ({children}: PropsWithChildren) => {
             <GlobalStyle />
             <Header />
             {children}
+            <Footer />
         </ThemeProvider>
     )
 }

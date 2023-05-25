@@ -64,6 +64,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+
     @media only screen and (min-width: 140em) {
         /* main {
             max-width: 132rem;
