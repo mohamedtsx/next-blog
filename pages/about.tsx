@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import Image from "next/image";
+import Link from "next/link";
+
+import LinkedinSVG from '@/static/svg/linkedin.svg';
+import WhatsappSVG from '@/static/svg/whatsapp.svg';
+import GithubSVG from '@/static/svg/github.svg';
+import GmailSVG from '@/static/svg/gmail.svg';
 
 const Title = styled.h1`
     font-family: inherit;
@@ -21,6 +28,12 @@ const SubTitle = styled.h2`
     font-size: var(--fz-xl);
     margin-top: 4.8rem;
 `
+
+const StyledContact = styled.div`
+    ${({theme}) => theme.mixes.flexBetween};
+    width: 10rem;
+`;
+
 const About = () => {
 
     return(
@@ -35,6 +48,18 @@ const About = () => {
                 When I'm not coding or writing blog posts, you can find me reading about new technologies, spending time with friends and family, or staying active by going on hikes. I believe maintaining a work-life balance is important for sustained creativity and productivity.
             </p>
             <SubTitle>Say Hello: </SubTitle>
+            <StyledContact>
+                <a href="mailto:mohamedtsx@gmail.com" target="_blank">
+                    <Image src={GmailSVG} width={30} height={30} alt="gmail" />
+                </a>
+                <a href="https://linkedin.com/in/mohamedtsx" target="_blank">
+                    <Image src={LinkedinSVG} width={30} height={30} alt="linkedin" />
+                </a>
+                <a href="https://wa.me/01102687520" target="_blank">
+                    <Image src={WhatsappSVG} width={30} height={30} alt="whatsapp" />
+                </a>
+            </StyledContact>
+
         </StyledMain>
     )
 }

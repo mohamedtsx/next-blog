@@ -63,10 +63,10 @@ type BlogCardProps = {
 }
 
 const BlogCard = ({data}: BlogCardProps) => {
-    const { title, date, topic} = data;
+    const { title, date, topic, id} = data;
 
     return(
-        <StyledLink href='./'>
+        <StyledLink href={`/blog/${id}`}>
             <CardContainer>
                 <Title>{title}</Title>
                 <Meta>

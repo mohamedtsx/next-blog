@@ -8,13 +8,14 @@ import Header from "../header/header.component";
 import Footer from "../footer/footer.component";
 
 
+
 const Layout = ({children}: PropsWithChildren) => {
 
     return(
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Header />
-            {children}
+                {children}
             <Footer />
         </ThemeProvider>
     )

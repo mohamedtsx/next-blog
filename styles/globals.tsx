@@ -40,8 +40,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         font-size: var(--fz-md);
         font-weight: 600;
-        width: 100%;
-        height: 100%;
+        min-height: 100vh;
         overflow-x: hidden;
     }
 
@@ -58,6 +57,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         position: relative;
         text-decoration: none;
+        line-height: 0;
     }
 
     h1,h2 {
