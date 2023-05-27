@@ -1,8 +1,7 @@
 ---
-title: "Why Your Internet is Limited?"
+title: "Getting Started with AWS"
 subtitle: "Create an AWS account and set up CLI/SDK access."
-date: "28 March 2023"
-topic: "performance"
+date: "2020-12-27"
 ---
 
 "Cloud computing" plays a vital role in the creation of software products and services. It's also one of the most highly sought-after skills in the tech industry.

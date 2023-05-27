@@ -11,10 +11,11 @@ const sampleData = {
   slug: 'aws'
 }
 
-const StyledMain = styled.main`
+const StyledContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
   gap: 1rem;
+  
 `
 
 type HomeProps = {
@@ -28,13 +29,15 @@ export default function Home(props: HomeProps) {
   const {blogsMetaData: { default: blogsMetaDataArray }} = props;
 
   return (
-    <StyledMain>
-      {
-        blogsMetaDataArray ? 
-        blogsMetaDataArray.map(el => <BlogCard key={el.slug} data={el}/>)
-        : <h1>Pending...</h1>
-      }
-    </StyledMain>
+    <main>
+      <StyledContainer>
+        {
+          blogsMetaDataArray ? 
+          blogsMetaDataArray.map(el => <BlogCard key={el.slug} data={el}/>)
+          : <h1>Pending...</h1>
+        }
+      </StyledContainer>
+    </main>
   )
 }
 
