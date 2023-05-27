@@ -1,6 +1,7 @@
 import { BlogMetaData } from '@/components/card/card.component';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Markdown from 'markdown-to-jsx';
 
 type BlogProps = {
     blogContent: {
@@ -57,6 +58,9 @@ const Topic = styled.div`
     ${({theme}) => theme.mixes.flexBetween}
 `
 
+const Article = styled.article`
+    margin-top: 4rem;
+`
 
 const Blog = ({ blogContent }: BlogProps) => {
 
@@ -81,6 +85,9 @@ const Blog = ({ blogContent }: BlogProps) => {
                 </Topic>
                 <Date>{data.date}</Date>
             </MetaData>
+            <Article>
+                <Markdown>{content}</Markdown>
+            </Article>
         </StyledBlog>
     );
 }
