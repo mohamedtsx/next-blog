@@ -14,6 +14,7 @@ const nextConfig = {
         const ignoreFs = new IgnorePlugin({ resourceRegExp: /fs/ });
         config.plugins.push(ignoreFs);
       };
+  
       
       return config
     }

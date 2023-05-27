@@ -2,11 +2,11 @@ import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 
-export type MetaDataItem = {
+export type BlogMetaData = {
     title: string;
     date: string;
     topic: string;
-    id: number;
+    slug: string;
 }
 
 const StyledLink = styled(Link)`
@@ -59,14 +59,14 @@ const Title = styled.h1`
 `;
 
 type BlogCardProps = {
-    data: MetaDataItem;
+    data: BlogMetaData;
 }
 
 const BlogCard = ({data}: BlogCardProps) => {
-    const { title, date, topic, id} = data;
+    const { title, date, topic, slug} = data;
 
     return(
-        <StyledLink href={`/blog/${id}`}>
+        <StyledLink href={`/blogs/${slug}`}>
             <CardContainer>
                 <Title>{title}</Title>
                 <Meta>

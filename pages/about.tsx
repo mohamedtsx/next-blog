@@ -38,7 +38,7 @@ const About = () => {
 
     return(
         <StyledMain>
-            <Title>Hi, I'm Mohamed 👋</Title>
+            <Title>Hi, I'm Mohamed 👋 &nbsp;</Title>
             <br/>
             <p>
                 I am a computer science student and frontend developer with experience building web applications using ReactJS and other JavaScript technologies. I have a passion for coding and building software solutions. In my free time, I like to write blog posts to share my knowledge with the community and document my learning journey.

@@ -1,12 +1,14 @@
-import BlogCard from '@/components/card/card.component';
 import styled from 'styled-components';
+import BlogCard from '@/components/card/card.component';
+import { BlogMetaData } from "@/components/card/card.component"
+import { GetStaticProps } from 'next'
 
 
 const sampleData = {
   title: 'Slow start and congestion control (Browser Networking)',
   topic: 'performance',
   date: 'Apr 03,2023',
-  id: 1
+  slug: 'aws'
 }
 
 const StyledMain = styled.main`
@@ -15,14 +17,28 @@ const StyledMain = styled.main`
   gap: 1rem;
 `
 
-export default function Home() {
+type HomeProps = {
+  blogsMetaData:  { 
+    default: BlogMetaData[] 
+  };
+  
+}
 
-  const A = Array(10).fill(sampleData);
-  console.log(A)
+export default function Home(props: HomeProps) {
+  const {blogsMetaData: { default: blogsMetaData }} = props;
+
 
   return (
-    <StyledMain>      
-      <BlogCard data={sampleData}/>
+    <StyledMain>
+      {blogsMetaData.map(el => 
+        <BlogCard key={el.slug} data={el}/>
+      )}
     </StyledMain>
   )
+}
+
+export async function getStaticProps() {
+  const blogsMetaData = await import('@/utils/get-metadata');  
+  const data = JSON.parse(JSON.stringify(blogsMetaData)) as BlogMetaData[];
+  return { props: {blogsMetaData: data }};
 }
