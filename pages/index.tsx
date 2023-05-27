@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import BlogCard from '@/components/card/card.component';
 import { BlogMetaData } from "@/components/card/card.component"
-import { GetStaticProps } from 'next'
+
 
 
 const sampleData = {
@@ -25,14 +25,15 @@ type HomeProps = {
 }
 
 export default function Home(props: HomeProps) {
-  const {blogsMetaData: { default: blogsMetaData }} = props;
-
+  const {blogsMetaData: { default: blogsMetaDataArray }} = props;
 
   return (
     <StyledMain>
-      {blogsMetaData.map(el => 
-        <BlogCard key={el.slug} data={el}/>
-      )}
+      {
+        blogsMetaDataArray ? 
+        blogsMetaDataArray.map(el => <BlogCard key={el.slug} data={el}/>)
+        : <h1>Pending...</h1>
+      }
     </StyledMain>
   )
 }

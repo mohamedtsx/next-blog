@@ -16,4 +16,15 @@ const getBlogsMetaDate = (): BlogMetaData[] => {
     });
 }
 
-export const blogsMetaData = getBlogsMetaDate();  
+const blogsMetaData = getBlogsMetaDate();  
+
+export const paths = blogsMetaData.map(el => (
+  {
+    params: {
+      slug: el.slug
+    }
+  }
+));
+
+
+export default blogsMetaData;
