@@ -4,18 +4,10 @@ import { BlogMetaData } from "@/components/card/card.component"
 
 
 
-const sampleData = {
-  title: 'Slow start and congestion control (Browser Networking)',
-  topic: 'performance',
-  date: 'Apr 03,2023',
-  slug: 'aws'
-}
-
-const StyledContainer = styled.div`
+export const BlogsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
   gap: 1rem;
-  
 `
 
 type HomeProps = {
@@ -26,20 +18,21 @@ type HomeProps = {
 }
 
 export default function Home(props: HomeProps) {
-  const {blogsMetaData: { default: blogsMetaDataArray }} = props;
+  const { blogsMetaData: { default: blogsMetaDataArray }} = props;
 
   return (
     <main>
-      <StyledContainer>
+      <BlogsContainer>
         {
           blogsMetaDataArray ? 
           blogsMetaDataArray.map(el => <BlogCard key={el.slug} data={el}/>)
           : <h1>Pending...</h1>
         }
-      </StyledContainer>
+      </BlogsContainer>
     </main>
   )
 }
+
 
 export async function getStaticProps() {
   const blogsMetaData = await import('@/utils/get-metadata');  

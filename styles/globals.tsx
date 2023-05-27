@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        max-width: 114rem;
+        max-width: 116rem;
         min-height: calc(100vh - 13.5rem);
         margin: 0 auto;
         padding: 3rem 1.5rem;

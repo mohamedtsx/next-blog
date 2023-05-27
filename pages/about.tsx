@@ -27,6 +27,7 @@ const SubTitle = styled.h2`
     font-family: 'Roboto', sans-serif;
     font-size: var(--fz-xl);
     margin-top: 4.8rem;
+    font-weight: 400;
 `
 
 const StyledContact = styled.div`

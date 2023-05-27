@@ -9,7 +9,10 @@ type BlogProps = {
     blogContent: {
         content: string;
         data: BlogMetaData
-    }
+    };
+    blogsMetaData: { 
+        default: BlogMetaData[] 
+    };
 }
 
 export const StyledBlog = styled.main`
@@ -20,8 +23,14 @@ export const StyledBlog = styled.main`
 const Article = styled.article`
     margin-top: 4rem;
 `
+const Blog = ( BlogProps: BlogProps) => {
 
-const Blog = ({ blogContent }: BlogProps) => {
+    const { 
+        blogContent, 
+        blogsMetaData: { 
+            default: blogsMetaDataArray 
+        } } = BlogProps;
+
 
     const { content, data } = blogContent;
 
@@ -32,7 +41,7 @@ const Blog = ({ blogContent }: BlogProps) => {
             <Article>
                 <Markdown>{content}</Markdown>
             </Article>
-            <ReadMore />
+            <ReadMore blogsArray={blogsMetaDataArray}/>
         </StyledBlog>
     );
 }
@@ -49,7 +58,10 @@ export async function getStaticProps(context: any) {
     const blog = getBlogContent["default"](slug);
     const blogContent = JSON.parse(JSON.stringify(blog));
 
-    return { props: {blogContent}};
+    const data = await import('@/utils/get-metadata');  
+    const blogsMetaData = JSON.parse(JSON.stringify(data)) as BlogMetaData[];
+
+    return { props: {blogContent, blogsMetaData}};
 }
 
 

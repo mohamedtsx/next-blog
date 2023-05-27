@@ -11,6 +11,7 @@ export type BlogMetaData = {
 
 const StyledLink = styled(Link)`
     height: 17rem;
+    width: 100%;
 
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px 2px;
@@ -34,10 +35,10 @@ const Meta = styled.div`
 
 const CardContainer = styled.div`
     color: var(--header-text-color);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 100%;
     height: 100%;
 
@@ -56,7 +57,14 @@ const CardContainer = styled.div`
 const Title = styled.h1`
     margin-bottom: 2rem;
     font-size: var(--fz-xl);
+    font-weight: 500;
 `;
+
+const Article = styled.article`
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
+    padding: 0 1.2rem;
+`
 
 type BlogCardProps = {
     data: BlogMetaData;
@@ -66,23 +74,26 @@ const BlogCard = ({data}: BlogCardProps) => {
     const { title, date, topic, slug} = data;
 
     return(
-        <StyledLink href={`/blogs/${slug}`}>
-            <CardContainer>
-                <Title>{title}</Title>
-                <Meta>
-                    <div>
-                        <Image 
-                            src={`/static/icon-topic/${topic}-topic.png`}
-                            alt={`${topic}`}
-                            width={20}
-                            height={20}
-                        />
-                        {topic}
-                    </div>
-                    <div>{date}</div>
-                </Meta>
-            </CardContainer>
-        </StyledLink>
+        <Article>
+            <StyledLink href={`/blogs/${slug}`}>
+                <CardContainer>
+                    <Title>{title}</Title>
+                    <Meta>
+                        <div>
+                            <Image 
+                                src={`/static/icon-topic/${topic}-topic.png`}
+                                alt={`${topic}`}
+                                width={20}
+                                height={20}
+                            />
+                            {topic}
+                        </div>
+                        <div>{date}</div>
+                    </Meta>
+                </CardContainer>
+            </StyledLink>
+        </Article>
+
     )
 }
 
