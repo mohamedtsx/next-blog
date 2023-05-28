@@ -7,7 +7,6 @@ import { BlogMetaData } from "@/components/card/card.component"
 export const BlogsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
-  gap: 1rem;
 `
 
 type HomeProps = {

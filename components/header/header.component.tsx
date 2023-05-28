@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
     
 `;
 const NaveLeft = styled(StyledLink)`
-    font-size: var(--fz-xxl);
+    font-size: 2.4rem;
     color: #fff;
     padding: 3px 0;
 `;

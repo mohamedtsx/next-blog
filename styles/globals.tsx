@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         --fz-md:1.6rem;
         --fz-lg: 1.8rem;
         --fz-xl: 2rem;
-        --fz-xxl: 2.4rem;
+        --fz-xxl: 2.2rem;
         --fz-heading: 4rem;
 
         --border-radius: 5px;

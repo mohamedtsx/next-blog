@@ -1,7 +1,8 @@
 ---
-title: "Getting Started with AWS"
+title: "Slow start and congestion control (Browser Networking)"
 subtitle: "Create an AWS account and set up CLI/SDK access."
-date: "2020-12-27"
+date: "Apr 03, 2023"
+topic: "performance"
 ---
 
 "Cloud computing" plays a vital role in the creation of software products and services. It's also one of the most highly sought-after skills in the tech industry.

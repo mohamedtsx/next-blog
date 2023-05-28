@@ -22,6 +22,7 @@ const Meta = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
     font-size: var(--fz-sm);
     font-weight: 400;
+    text-transform: capitalize;
     opacity: 0.8;
 
     >*:first-child {
@@ -30,6 +31,13 @@ const Meta = styled.div`
 
     img {
         margin-right: 4px;
+    }
+
+    span {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: unset;
+        font-weight: 400;
     }
 `;
 
@@ -55,8 +63,9 @@ const CardContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    margin-bottom: 2rem;
-    font-size: var(--fz-xl);
+    padding-bottom: 2rem;
+    font-size: var(--fz-xxl);
+    line-height: 3rem;
     font-weight: 500;
 `;
 
@@ -88,7 +97,7 @@ const BlogCard = ({data}: BlogCardProps) => {
                             />
                             {topic}
                         </div>
-                        <div>{date}</div>
+                        <span>{date}</span>
                     </Meta>
                 </CardContainer>
             </StyledLink>
