@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: var(--fz-md);
         font-weight: 600;
         min-height: 100vh;
+        min-width: 30rem;
         overflow-x: hidden;
     }
 
@@ -65,10 +66,10 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.2;
     }
 
-    @media only screen and (min-width: 140em) {
-        /* main {
-            max-width: 132rem;
-        } */
+    @media only screen and (max-width: 40em) {
+        main {
+            padding: 1rem;
+        }
     }
 `
 

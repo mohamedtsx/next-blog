@@ -5,20 +5,13 @@ const StyledHeader = styled.header`
     width: 100%;
     padding: 5rem 0;
     background-color: var(--header-bg-color);
-`
-const StyledNav = styled.nav`
-    ${({theme}) => theme.mixes.flexBetween};
-    width: 100%;
-    padding: 0 2rem;
-    margin: auto;
-    max-width: 114rem;
-`
+`;
 
 
 const NaveRight = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
     width: 10rem;
-`
+`;
 
 const StyledLink = styled(Link)`
     font-size: var(--fz-lg);
@@ -36,6 +29,27 @@ const NaveLeft = styled(StyledLink)`
     color: #fff;
     padding: 3px 0;
 `;
+
+const StyledNav = styled.nav`
+    ${({theme}) => theme.mixes.flexBetween};
+    /* gap: 2rem; */
+    /* flex-wrap: wrap; */
+
+    width: 100%;
+    padding: 0 2rem;
+    margin: auto;
+    max-width: 114rem;
+
+    @media only screen and (max-width: 350px) {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        ${NaveLeft} {
+            font-size: 3.2rem;
+        }
+    }
+`
 
 
 const Header = () => {

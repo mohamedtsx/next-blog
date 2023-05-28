@@ -41,7 +41,10 @@ const Blog = ( BlogProps: BlogProps) => {
             <Article>
                 <Markdown>{content}</Markdown>
             </Article>
-            <ReadMore blogsArray={blogsMetaDataArray}/>
+            <ReadMore 
+                blogsArray={blogsMetaDataArray} 
+                currentBlogTitle={data.title}
+            />
         </StyledBlog>
     );
 }

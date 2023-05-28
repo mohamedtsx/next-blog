@@ -9,10 +9,18 @@ const StyledFooter = styled.footer`
 
 const StyledContainer = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
+    gap: 2rem;
+    flex-wrap: wrap;
+
     max-width: 116rem;
     margin: auto;
     color: var(--dark-white);
     font-weight: 400;
+
+    @media only screen and (max-width: 350px) {
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
 `;
 
 const SocialLIst = styled.ul`

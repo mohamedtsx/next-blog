@@ -7,6 +7,11 @@ import { BlogMetaData } from "@/components/card/card.component"
 export const BlogsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem,1fr));
+
+  @media only screen and (max-width: 60em) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 type HomeProps = {

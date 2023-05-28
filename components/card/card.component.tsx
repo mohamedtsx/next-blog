@@ -16,6 +16,10 @@ const StyledLink = styled(Link)`
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px 2px;
     }
+
+    @media only screen and (max-width: 40em) {
+        height: auto;
+    }
 `;
 
 const Meta = styled.div`
@@ -73,7 +77,7 @@ const Article = styled.article`
     font-family: 'Roboto', sans-serif;
     margin-top: 2rem;
     padding: 0 1.2rem;
-`
+`;
 
 type BlogCardProps = {
     data: BlogMetaData;

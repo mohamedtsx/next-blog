@@ -5,14 +5,15 @@ import BlogCard from "../card/card.component";
 
 
 
-const getRandomBlogs = (arr: BlogMetaData[], n: number) => {
+const getRandom3Blogs = (arr: BlogMetaData[], currentBlogTitle: string) => {
     let len = arr.length;
     let result: BlogMetaData[] = new Array();
 
     while(result.length < 3 && len>3) {
         let x = Math.floor(Math.random() * len);
-        let isTaken = result.find(el => el === arr[x]);        
-        if(!isTaken) {
+        let isTaken = result.find(el => el === arr[x]);  
+        
+        if(!isTaken && currentBlogTitle !== arr[x].title) {
             result.push(arr[x]);
         }
     }
@@ -22,6 +23,7 @@ const getRandomBlogs = (arr: BlogMetaData[], n: number) => {
 
 type ReadMoreProps = {
     blogsArray: BlogMetaData[];
+    currentBlogTitle: string;
 }
 
 
@@ -42,10 +44,10 @@ const StyledBlogsContainer = styled(BlogsContainer)`
     margin: 0 -1.2rem;
 `
 
-const ReadMore = ({ blogsArray }: ReadMoreProps) => {
+const ReadMore = ({ blogsArray, currentBlogTitle }: ReadMoreProps) => {
 
     
-    const randomBlogs = getRandomBlogs(blogsArray, 3);
+    const randomBlogs = getRandom3Blogs(blogsArray, currentBlogTitle);
     
 
     return(
