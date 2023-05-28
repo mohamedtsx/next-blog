@@ -5,6 +5,8 @@ import BlogHeader from '@/components/blog-header/blog-header.component'
 import Markdown from 'markdown-to-jsx';
 import ReadMore from '@/components/readmore/readmore.component';
 
+
+
 type BlogProps = {
     blogContent: {
         content: string;
@@ -21,6 +23,8 @@ export const StyledBlog = styled.main`
 `
 
 const Article = styled.article`
+    ${({theme}) => theme.typography};
+    
     margin-top: 4rem;
 `
 const Blog = ( BlogProps: BlogProps) => {

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 
+
 const GlobalStyle = createGlobalStyle`
     :root {
         --header-text-color: #1d2225;

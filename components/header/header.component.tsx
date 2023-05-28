@@ -32,8 +32,6 @@ const NaveLeft = styled(StyledLink)`
 
 const StyledNav = styled.nav`
     ${({theme}) => theme.mixes.flexBetween};
-    /* gap: 2rem; */
-    /* flex-wrap: wrap; */
 
     width: 100%;
     padding: 0 2rem;
