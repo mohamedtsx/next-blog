@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { BlogMetaData } from '@/components/card/card.component';
 import BlogHeader from '@/components/blog-header/blog-header.component'
+import { StyledBlogShare } from '@/components/share/share.component';
 
 import Markdown from 'markdown-to-jsx';
 import ReadMore from '@/components/readmore/readmore.component';
+import BlogShare from '@/components/share/share.component';
 
 
 
@@ -23,8 +25,26 @@ export const StyledBlog = styled.main`
 `
 
 const Article = styled.article`
-    margin: 4rem auto 0;
+    flex-grow: 1;
+    background-color: gray;
 `
+
+const BlogMain = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
+    background-color: green;
+
+    @media only screen and (max-width: 1200px) {
+        justify-content: center;
+        ${StyledBlogShare} {
+           display: none;
+        }
+    }
+`;
+
 const Blog = ( BlogProps: BlogProps) => {
 
     const { 
@@ -40,9 +60,23 @@ const Blog = ( BlogProps: BlogProps) => {
 
         <StyledBlog>
             <BlogHeader metaData={data}/>
-            <Article className='prose lg:prose-xl'>
-                <Markdown>{content}</Markdown>
-            </Article>
+            <BlogMain>
+                <Article className='
+                    prose 
+                    max-w-none 
+                    lg:prose-xl 
+                    md:prose 
+                    sm:prose-sm
+                    base:prose-xs 
+                    sm:text-base
+
+                    max-w-md 
+                    sm:max-w-none 
+                '>
+                    <Markdown>{content}</Markdown>
+                </Article>
+                <BlogShare />
+            </BlogMain>
             <ReadMore 
                 blogsArray={blogsMetaDataArray} 
                 currentBlogTitle={data.title}
