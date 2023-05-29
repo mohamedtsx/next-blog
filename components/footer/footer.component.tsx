@@ -3,16 +3,16 @@ import Image from "next/image";
 
 const StyledFooter = styled.footer`
     width: 100%;
-    padding: 2rem 3rem;
+    padding: 20px 30px;
     background-color: var(--header-bg-color);
 `;
 
 const StyledContainer = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
-    gap: 2rem;
+    gap: 20px;
     flex-wrap: wrap;
 
-    max-width: 116rem;
+    max-width: 1160px;
     margin: auto;
     color: var(--dark-white);
     font-weight: 400;
@@ -25,7 +25,7 @@ const StyledContainer = styled.div`
 
 const SocialLIst = styled.ul`
     ${({theme}) => theme.mixes.flexBetween};
-    gap: 1rem;
+    gap: 10px;
     list-style: none;
 
     img {

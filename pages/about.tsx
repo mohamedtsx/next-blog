@@ -8,7 +8,7 @@ import GmailSVG from '@/static/svg/gmail.svg';
 const Title = styled.h1`
     font-family: inherit;
     font-weight: inherit;
-    font-size: 4rem;
+    font-size: 2.5rem;
 
 `
 
@@ -18,19 +18,19 @@ const StyledMain = styled.main`
     font-weight: 500;
     
     color: var(--header-text-color);
-    padding: 5rem 1.5rem;
+    padding: 50px 15px;
 `
 
 const SubTitle = styled.h2`
     font-family: 'Roboto', sans-serif;
     font-size: var(--fz-xl);
-    margin-top: 4.8rem;
+    margin-top: 48px;
     font-weight: 400;
 `
 
 const StyledContact = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
-    width: 10rem;
+    width: 100px;
 `;
 
 const About = () => {

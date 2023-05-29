@@ -28,20 +28,20 @@ type ReadMoreProps = {
 
 
 const ReadMoreContainer = styled.div`
-    line-height: 4rem;
+    line-height: 40px;
 `
 const ReadMoreTitle = styled.h3`
-    font-size: calc(2rem + .6vw);
+    font-size: calc(20px + .6vw);
     font-weight: 500;
     border-top: 1px solid #eee;
 
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-top: 20px;
+    padding-top: 20px;
     color: #777777;
 `
 
 const StyledBlogsContainer = styled(BlogsContainer)`
-    margin: 0 -1.2rem;
+    margin: 0 -12px;
 `
 
 const ReadMore = ({ blogsArray, currentBlogTitle }: ReadMoreProps) => {

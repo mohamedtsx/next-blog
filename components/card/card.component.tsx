@@ -10,14 +10,14 @@ export type BlogMetaData = {
 }
 
 const StyledLink = styled(Link)`
-    height: 17rem;
+    height: 170px;
     width: 100%;
 
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px 2px;
     }
 
-    @media only screen and (max-width: 40em) {
+    @media only screen and (max-width: 400px) {
         height: auto;
     }
 `;
@@ -54,7 +54,7 @@ const CardContainer = styled.div`
     width: 100%;
     height: 100%;
 
-    padding: 2rem;
+    padding: 20px;
     border: 1px solid var(--header-text-color);
     border-radius: var(--border-radius);
 
@@ -67,16 +67,16 @@ const CardContainer = styled.div`
 `;
 
 const Title = styled.h1`
-    padding-bottom: 2rem;
+    padding-bottom: 20px;
     font-size: var(--fz-xxl);
-    line-height: 3rem;
+    line-height: 30px;
     font-weight: 500;
 `;
 
 const Article = styled.article`
     font-family: 'Roboto', sans-serif;
-    margin-top: 2rem;
-    padding: 0 1.2rem;
+    margin-top: 20px;
+    padding: 0 12px;
 `;
 
 type BlogCardProps = {

@@ -3,42 +3,42 @@ import Image from "next/image"
 import { BlogMetaData } from "../card/card.component";
 
 const Title = styled.h1`
-    font-size: 7.6rem;
-    color: var(--header-txt-color);
+    font-size: 4.75rem;
+    color: var(--header-txt-color);  
     font-weight: 500;
-    margin: 2rem 0;
-    padding-top: 3rem;
+    margin: 20px 0;
+    padding-top: 30px;
 `;
 
 const TitleContainer = styled.div`
-    padding-bottom: 1rem;
-`
+    padding-bottom: 10px;
+`;
 
 const MetaData = styled.div`
     font-family: 'Roboto', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.125rem;
 
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     flex-flow: row nowrap;
-    gap: 2.6rem;
+    gap: 26px;
     text-transform: capitalize;
     font-weight: 500;
-`
+`;
 
 const TopicText = styled.span`
     display: inline-block;
-    padding-left: 0.8rem;
+    padding-left: 8px;
     color: #555;
-`
+`;
 const TopicIcon = styled.div`
     line-height: 0;   
-`
+`;
 
 const Date = styled.span`
     color: #9b9eaf;
-`
+`;
 
 const Topic = styled.div`
     ${({theme}) => theme.mixes.flexBetween}

@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
     width: 100%;
-    padding: 5rem 0;
+    padding: 50px 0;
     background-color: var(--header-bg-color);
 `;
 
 
 const NaveRight = styled.div`
     ${({theme}) => theme.mixes.flexBetween};
-    width: 10rem;
+    width: 100px;
 `;
 
 const StyledLink = styled(Link)`
@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
     
 `;
 const NaveLeft = styled(StyledLink)`
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     color: #fff;
     padding: 3px 0;
 `;
@@ -34,17 +34,17 @@ const StyledNav = styled.nav`
     ${({theme}) => theme.mixes.flexBetween};
 
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 20px;
     margin: auto;
-    max-width: 114rem;
+    max-width: 1140px;
 
     @media only screen and (max-width: 350px) {
         flex-direction: column;
-        gap: 1rem;
+        gap: 10px;
         align-items: center;
 
         ${NaveLeft} {
-            font-size: 3.2rem;
+            font-size: 2rem;
         }
     }
 `

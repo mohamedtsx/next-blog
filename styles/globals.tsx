@@ -9,14 +9,14 @@ const GlobalStyle = createGlobalStyle`
         --link-color: #0787dd;
         --dark-white: #ffffffb3;
 
-        --fz-xxs: 1.2rem;
-        --fz-xs: 1.3rem;
-        --fz-sm: 1.4rem;
-        --fz-md:1.6rem;
-        --fz-lg: 1.8rem;
-        --fz-xl: 2rem;
-        --fz-xxl: 2.2rem;
-        --fz-heading: 4rem;
+        --fz-xxs: 0.75rem;      
+        --fz-xs: 0.8rem;
+        --fz-sm: 0.875rem;     
+        --fz-md: 1rem;       
+        --fz-lg: 1.125rem;     
+        --fz-xl: 1.25rem;
+        --fz-xxl: 1.375rem;
+        --fz-heading: 2.5rem;
 
         --border-radius: 5px;
         --transition: .15s ease-in-out;
@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        font-size: 62.5%;
+        /* font-size: 62.5%; */
         scroll-behavior: smooth;
     }
     
@@ -42,15 +42,15 @@ const GlobalStyle = createGlobalStyle`
         font-size: var(--fz-md);
         font-weight: 600;
         min-height: 100vh;
-        min-width: 30rem;
+        min-width: 300px;
         overflow-x: hidden;
     }
 
     main {
-        max-width: 116rem;
-        min-height: calc(100vh - 13.5rem);
+        max-width: 1160px;
+        min-height: calc(100vh - 135px);
         margin: 0 auto;
-        padding: 3rem 1.5rem;
+        padding: 30px 15px;
     }
 
     a {
@@ -67,9 +67,9 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.2;
     }
 
-    @media only screen and (max-width: 40em) {
+    @media only screen and (max-width: 400px) {
         main {
-            padding: 1rem;
+            padding: 10px;
         }
     }
 `
