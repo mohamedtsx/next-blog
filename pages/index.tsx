@@ -1,6 +1,7 @@
+
 import styled from 'styled-components';
 import BlogCard from '@/components/card/card.component';
-import { BlogMetaData } from "@/components/card/card.component"
+import { BlogMetaData } from "@/components/card/card.component";
 
 
 

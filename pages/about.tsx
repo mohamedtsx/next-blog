@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/link";
 
 import LinkedinSVG from '@/static/svg/linkedin.svg';
 import WhatsappSVG from '@/static/svg/whatsapp.svg';
-import GithubSVG from '@/static/svg/github.svg';
 import GmailSVG from '@/static/svg/gmail.svg';
 
 const Title = styled.h1`

@@ -23,9 +23,7 @@ export const StyledBlog = styled.main`
 `
 
 const Article = styled.article`
-    ${({theme}) => theme.typography};
-    
-    margin-top: 4rem;
+    margin: 4rem auto 0;
 `
 const Blog = ( BlogProps: BlogProps) => {
 
@@ -33,7 +31,7 @@ const Blog = ( BlogProps: BlogProps) => {
         blogContent, 
         blogsMetaData: { 
             default: blogsMetaDataArray 
-        } } = BlogProps;
+    } } = BlogProps;
 
 
     const { content, data } = blogContent;
@@ -42,7 +40,7 @@ const Blog = ( BlogProps: BlogProps) => {
 
         <StyledBlog>
             <BlogHeader metaData={data}/>
-            <Article>
+            <Article className='prose lg:prose-xl'>
                 <Markdown>{content}</Markdown>
             </Article>
             <ReadMore 
