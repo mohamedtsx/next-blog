@@ -44,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         min-width: 300px;
         overflow-x: hidden;
+        position: relative;
     }
 
     main {
@@ -66,6 +67,8 @@ const GlobalStyle = createGlobalStyle`
         margin-bottom: 8px;
         line-height: 1.2;
     }
+
+
 
     @media only screen and (max-width: 400px) {
         main {

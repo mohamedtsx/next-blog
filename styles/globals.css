@@ -24,3 +24,9 @@
 .prose h3 {
     font-size: calc(1.3rem + .6vw);
 }
+
+.sticky {
+
+    position: sticky;
+    top: 0;
+}
