@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
         max-width: 1160px;
         min-height: calc(100vh - 135px);
         margin: 0 auto;
-        padding: 30px 15px;
+        padding: 30px min(15px, 2vw);
     }
 
     a {
