@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-gray-900 {
+    color: #1D2225;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.prose h1, 
+.prose h2,
+.prose h3, 
+.prose h4, 
+.prose h5,
+.prose h6 {
+  color: #1D2225;
+  font-weight: 600;
+  line-height: 2.5rem;
+}
+
+.prose h3 {
+    font-size: calc(1.3rem + .6vw);
+}

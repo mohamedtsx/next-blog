@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledBlogShare = styled.aside`
     background-color: red;
-    width: 400px;
+    width: 300px;
 `
 
 const boxWidth = 300;

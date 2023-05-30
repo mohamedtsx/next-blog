@@ -62,13 +62,12 @@ const Blog = ( BlogProps: BlogProps) => {
             <BlogMain>
                 <Article className='
                    prose 
-                   max-w-50vw 
-                   text-xs 
-                   md:text-base 
-                   md:block 
-                   sm:p-0 
-                   sm:m-0 
+                   lg:prose-xl 
+                   max-w-none 
+                   md:text-xl  
                    sm:prose-sm 
+                   font-normal 
+                   text-gray-900 
                 '>
                     <Markdown>{content}</Markdown>
                 </Article>

@@ -1,5 +1,5 @@
 ---
-title: "Slow start and congestion control (Browser Networking)"
+title: "Slow start and congestion control"
 subtitle: "Create an AWS account and set up CLI/SDK access."
 date: "Apr 03, 2023"
 topic: "performance"
