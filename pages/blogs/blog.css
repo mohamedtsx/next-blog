@@ -1,0 +1,22 @@
+.styled-blog {
+    font-family: 'Lora', serif;
+    padding-top: 0;
+}
+    
+.styled-article {
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+.styled-blog-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .styled-blog-main {
+        justify-content: center;
+    }
+}

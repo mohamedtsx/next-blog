@@ -14,6 +14,10 @@ export const StyledBlogShare = styled.aside`
         font-size: var(--fz-sm);
         font-weight: 400;
     }
+
+    @media only screen and (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 
@@ -21,7 +25,7 @@ const ShareIconsContainer = styled.div`
     ${({theme}) => theme.mixes.flexCenter};
     width: fit-content;
     padding: 25vh 0;
-    margin: auto;
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;

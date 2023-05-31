@@ -7,18 +7,18 @@ import Markdown from 'markdown-to-jsx';
 import ReadMore from '@/components/readmore/readmore.component';
 import BlogShare from '@/components/share/share.component';
 
+import { paths } from '@/utils/get-metadata';
+import getBlogContent from '@/utils/get-blogcontent';
+import blogsMetaData from '@/utils/get-metadata';
+
 import { useEffect, useState } from 'react';
-
-
 
 type BlogProps = {
     blogContent: {
         content: string;
         data: BlogMetaData
     };
-    blogsMetaData: { 
-        default: BlogMetaData[] 
-    };
+    blogsMetaData: BlogMetaData[];
 }
 
 export const StyledBlog = styled.main`
@@ -45,28 +45,40 @@ const BlogMain = styled.div`
     }
 `;
 
+
+export async function getStaticPaths() {
+    return { paths, fallback: false };
+}
+
+export async function getStaticProps(context: any) {
+    const { params: { slug } } = context; 
+    const blog = getBlogContent(slug);
+    
+    const blogContent = JSON.parse(JSON.stringify(blog));
+    const data = JSON.parse(JSON.stringify(blogsMetaData)) as BlogMetaData[];
+    
+    return { props: {blogContent, blogsMetaData: data}};
+}
+
 const Blog = ( BlogProps: BlogProps) => {
 
     const { 
         blogContent, 
-        blogsMetaData: { 
-            default: blogsMetaDataArray 
-    } } = BlogProps;
+        blogsMetaData
+    } = BlogProps;
 
     const { content, data } = blogContent;
 
-    
-    const [contentState, setContentState] = useState('');
+    const [contentState, seContentState] = useState('')
+
 
     useEffect(() => {
-        setContentState(content);
+        seContentState(content);
     }, []);
-
-
+    
 
     return(
-
-        contentState ? 
+        contentState ?
         <StyledBlog>
             <BlogHeader metaData={data}/>
             <BlogMain>
@@ -79,37 +91,18 @@ const Blog = ( BlogProps: BlogProps) => {
                    font-normal 
                    text-gray-900 
                 '>
-                    <Markdown>{contentState}</Markdown>
-                </Article> 
+                    <Markdown>{content}</Markdown>
+                </Article>
                 <BlogShare />
             </BlogMain>
             <ReadMore 
-                blogsArray={blogsMetaDataArray} 
+                blogsArray={blogsMetaData} 
                 currentBlogTitle={data.title}
             />
         </StyledBlog>
         : <div style={{height: '100vh'}}/>
     );
 }
-
-export async function getStaticPaths() {
-    const { paths } = await import('@/utils/get-metadata');
-    return { paths, fallback: false };
-}
-
-export async function getStaticProps(context: any) {
-    const { params: { slug } } = context;  
-    
-    const getBlogContent = await import("@/utils/get-blogcontent");
-    const blog = getBlogContent["default"](slug);
-    const blogContent = JSON.parse(JSON.stringify(blog));
-
-    const data = await import('@/utils/get-metadata');  
-    const blogsMetaData = JSON.parse(JSON.stringify(data)) as BlogMetaData[];
-
-    return { props: {blogContent, blogsMetaData}};
-}
-
 
 
 export default Blog;
