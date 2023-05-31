@@ -11,7 +11,7 @@ import { paths } from '@/utils/get-metadata';
 import getBlogContent from '@/utils/get-blogcontent';
 import blogsMetaData from '@/utils/get-metadata';
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 type BlogProps = {
     blogContent: {
@@ -69,16 +69,16 @@ const Blog = ( BlogProps: BlogProps) => {
 
     const { content, data } = blogContent;
 
-    const [contentState, seContentState] = useState('')
+    // const [contentState, seContentState] = useState('')
 
 
-    useEffect(() => {
-        seContentState(content);
-    }, []);
+    // useEffect(() => {
+    //     seContentState(content);
+    // }, []);
     
 
     return(
-        contentState ?
+        // contentState ?
         <StyledBlog>
             <BlogHeader metaData={data}/>
             <BlogMain>
@@ -100,7 +100,7 @@ const Blog = ( BlogProps: BlogProps) => {
                 currentBlogTitle={data.title}
             />
         </StyledBlog>
-        : <div style={{height: '100vh'}}/>
+        // : <div style={{height: '100vh'}}/>
     );
 }
 
