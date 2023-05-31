@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 
@@ -43,8 +42,8 @@ const StyledImage = styled(Image)`
 `
 
 const shareIcons = {
-    facebook: 'https://www.facebook.com/sharer/sharer.php?u=', 
-    tweeter: 'https://twitter.com/intent/tweet?url=', 
+    facebook: 'https://www.facebook.com/sharer/sharer.php?s=', 
+    tweeter: 'https://twitter.com/intent/tweet?text=', 
     linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=', 
     reddit: 'https://reddit.com/submit?url=', 
     whatsapp: 'whatsapp://send?text='
@@ -62,7 +61,7 @@ const BlogShare = () => {
                 {
                     Object.entries(shareIcons).map(([domain, host]) => {
                         return (
-                        <a href={`${host}${asPath}`} target="_blank">
+                        <a href={`${host}${asPath}`}>
                             <StyledImage 
                                 src={`../../static/svg/share-${domain}.svg`}
                                 width={35}
