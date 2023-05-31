@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 export const StyledBlogShare = styled.aside`
     width: 300px;
 
-    span {
+    small {
         text-transform: uppercase;
         font-family: 'Roboto', serif;
         color: var(--text-color);
@@ -38,29 +39,32 @@ const StyledImage = styled(Image)`
     }
 `
 
-const shareIcons = [
-    'facebook', 
-    'tweeter', 
-    'linkedin', 
-    'reddit', 
-    'whatsapp'
-];
+const shareIcons = {
+    facebook: 'https://www.facebook.com/sharer/sharer.php?u=', 
+    tweeter: 'https://twitter.com/intent/tweet?url=', 
+    linkedin: 'https://www.linkedin.com/shareArticle?mini=true&url=', 
+    reddit: 'https://reddit.com/submit?url=', 
+    whatsapp: 'whatsapp://send?text='
+};
 
 const BlogShare = () => {
+    const  router = useRouter();
+    const { asPath } = router;
+
 
     return(
         <StyledBlogShare>
             <ShareIconsContainer>
-                <span>share</span>
+                <small>share</small>
                 {
-                    shareIcons.map(iconName => {
+                    Object.entries(shareIcons).map(([domain, host]) => {
                         return (
-                        <Link href="#">
+                        <Link href={`${host}${asPath}`}>
                             <StyledImage 
-                                src={`../../static/svg/share-${iconName}.svg`}
+                                src={`../../static/svg/share-${domain}.svg`}
                                 width={35}
                                 height={35}
-                                alt={`${iconName}`}
+                                alt={`${domain}`}
                             />
                         </Link>
                         )
