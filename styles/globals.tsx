@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         min-height: 100vh;
         overflow-x: hidden;
-        /* font-size: 62.5%; */
         scroll-behavior: smooth;
     }
     
@@ -43,7 +42,6 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 600;
         min-height: 100vh;
         min-width: 300px;
-        overflow-x: hidden;
         position: relative;
     }
 

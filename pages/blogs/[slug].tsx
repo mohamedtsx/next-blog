@@ -34,7 +34,6 @@ const BlogMain = styled.div`
     justify-content: space-between;
     width: 100%;
     margin-top: 40px;
-    /* background-color: green; */
 
     @media only screen and (max-width: 1200px) {
         justify-content: center;

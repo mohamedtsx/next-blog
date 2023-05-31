@@ -4,10 +4,7 @@ import Link from "next/link";
 
 
 export const StyledBlogShare = styled.aside`
-    border-top: 1px solid red;
     width: 300px;
-
-    background-color: #eee;
 
     span {
         text-transform: uppercase;
@@ -22,7 +19,7 @@ export const StyledBlogShare = styled.aside`
 const ShareIconsContainer = styled.div`
     ${({theme}) => theme.mixes.flexCenter};
     width: fit-content;
-    padding: 50px 0;
+    padding: 25vh 0;
     margin: 0 auto;
 
     display: flex;
