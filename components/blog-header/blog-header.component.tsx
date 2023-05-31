@@ -28,7 +28,7 @@ const TitleContainer = styled.div`
 
 const MetaData = styled.div`
     font-family: 'Roboto', sans-serif;
-    font-size: 1.125rem;
+    font-size: var(--fz-lg);
 
     display: flex;
     align-items: flex-end;
@@ -47,6 +47,7 @@ const TopicText = styled.span`
     display: inline-block;
     padding-left: 8px;
     color: #555;
+    font-weight: 400;
 `;
 const TopicIcon = styled.div`
     line-height: 0;   
@@ -54,6 +55,7 @@ const TopicIcon = styled.div`
 
 const Date = styled.span`
     color: #9b9eaf;
+    font-weight: 400;
 `;
 
 const Topic = styled.div`

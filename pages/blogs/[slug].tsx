@@ -7,6 +7,8 @@ import Markdown from 'markdown-to-jsx';
 import ReadMore from '@/components/readmore/readmore.component';
 import BlogShare from '@/components/share/share.component';
 
+import { useEffect, useState } from 'react';
+
 
 
 type BlogProps = {
@@ -51,11 +53,20 @@ const Blog = ( BlogProps: BlogProps) => {
             default: blogsMetaDataArray 
     } } = BlogProps;
 
-
     const { content, data } = blogContent;
+
+    
+    const [contentState, setContentState] = useState('');
+
+    useEffect(() => {
+        setContentState(content);
+    }, []);
+
+
 
     return(
 
+        contentState ? 
         <StyledBlog>
             <BlogHeader metaData={data}/>
             <BlogMain>
@@ -68,8 +79,8 @@ const Blog = ( BlogProps: BlogProps) => {
                    font-normal 
                    text-gray-900 
                 '>
-                    <Markdown>{content}</Markdown>
-                </Article>
+                    <Markdown>{contentState}</Markdown>
+                </Article> 
                 <BlogShare />
             </BlogMain>
             <ReadMore 
@@ -77,6 +88,7 @@ const Blog = ( BlogProps: BlogProps) => {
                 currentBlogTitle={data.title}
             />
         </StyledBlog>
+        : <div style={{height: '100vh'}}/>
     );
 }
 

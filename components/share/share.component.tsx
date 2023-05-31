@@ -21,8 +21,7 @@ const ShareIconsContainer = styled.div`
     ${({theme}) => theme.mixes.flexCenter};
     width: fit-content;
     padding: 25vh 0;
-    margin: 0 auto;
-
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -59,14 +58,14 @@ const BlogShare = () => {
                 {
                     Object.entries(shareIcons).map(([domain, host]) => {
                         return (
-                        <Link href={`${host}${asPath}`}>
+                        <a href={`${host}${asPath}`} target="_blank">
                             <StyledImage 
                                 src={`../../static/svg/share-${domain}.svg`}
                                 width={35}
                                 height={35}
                                 alt={`${domain}`}
                             />
-                        </Link>
+                        </a>
                         )
                     })
                 }
